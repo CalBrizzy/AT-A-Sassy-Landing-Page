@@ -1,3 +1,5 @@
+@import "config";
+@import "utilities";
 
 * {
   box-sizing: border-box;
@@ -6,38 +8,108 @@
 }
 
 body {
-  background-color: $light-color;
+  @include set-bg ($primary-color) {
+    background-color: $primary-color;
+  };
   font-family: $font-stack;
   line-height: 1;
 }
 
 img {
+  margin-top: 50px;
   border-radius: 50%;
+  width: 50%;
 }
 
 a {
+  @include set-bg ($primary-color);
   text-decoration: none;
+
+  &:hover {
+    transition: all 0.3s ease;
+    color:darkorange;
+  }
 }
 
 .hero {
-  // This is where the bulk of the SCSS styling needs to be done
 
-  // Take a look at the other files we've built already. How can they be useful here?
+  color: text-color-picker ($primary-color);
 
-  // Also, take time to review the features of SCSS we've already covered:
-  // 1. $variables
-  // 2. nesting (dont forget about the ampersand (&) parent selector!)
-  // 3. At-Rules
+  .box {
+
+    nav {
+      @include flex (flex, space-between, row) {
+        align-items: center;
+        margin-top: 25px;
+      }
+
+      ul {
+        @include flex (flex, space-between, row) {
+          list-style: none;
+        }
+
+        a {
+          margin-right: 40px;
+        }
+      }
+    }
+
+    .banner {
+      font-size: 1.5em;
+    }
+  }
+}
+
+.hero-content {
+
+  @include flex (flex, space-between, row);
+
+  div {
+
+    @include flex (flex, center, column);
+
+    h1 {
+      font-size: 3em;
+    }
+
+    .btn-container {
+      @include flex (flex, start, row);
+    }
+
+    .btn-primary, .btn-secondary {
+      background-color: royalblue;
+      height: 35px;
+      width: 150px;
+      margin-top: 20px;
+      margin-right: 20px;
+      
+      &:hover {
+        transition: all 0.4s ease;
+        background-color: darken(royalblue, 20%);
+        transform: scale(1.1);
+      }
+
+    }
+
+  }
+
 }
 
 // This code is related to some of the aspects of SCSS we have yet to cover.
 // While you don't have to mess with it, it would be advisable to attempt to understand its functionality.
-$spaceamounts: (1,2,3,4,5);
+$spaceamounts: (
+  1,
+  2,
+  3,
+  4,
+  5
+);
 
 @each $space in $spaceamounts {
   .m-#{$space} {
     margin: #{$space}rem;
   }
+
   .my-#{$space} {
     margin: #{$space}rem 0;
   }
@@ -45,6 +117,7 @@ $spaceamounts: (1,2,3,4,5);
   .p-#{$space} {
     padding: #{$space}rem;
   }
+
   .py-#{$space} {
     padding: #{$space}rem 0;
   }

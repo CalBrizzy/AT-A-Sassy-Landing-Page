@@ -1,0 +1,168 @@
+.box {
+  max-width: 1100px;
+  padding: 0 30px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: white;
+  background-color: #000814;
+  font-family: Trebuchet MS, Arial, sans-serif;
+  line-height: 1;
+}
+
+img {
+  margin-top: 50px;
+  border-radius: 50%;
+  width: 50%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  transition: all 0.3s ease;
+  color: darkorange;
+}
+
+.hero {
+  color: text-color-picker #000814;
+}
+.hero .box nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 25px;
+}
+.hero .box nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  list-style: none;
+}
+.hero .box nav ul a {
+  margin-right: 40px;
+}
+.hero .box .banner {
+  font-size: 1.5em;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.hero-content div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.hero-content div h1 {
+  font-size: 3em;
+}
+.hero-content div .btn-container {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+}
+.hero-content div .btn-primary, .hero-content div .btn-secondary {
+  background-color: royalblue;
+  height: 35px;
+  width: 150px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.hero-content div .btn-primary:hover, .hero-content div .btn-secondary:hover {
+  transition: all 0.4s ease;
+  background-color: #1a3ca2;
+  transform: scale(1.1);
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.m-2 {
+  margin: 2rem;
+}
+
+.my-2 {
+  margin: 2rem 0;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.m-3 {
+  margin: 3rem;
+}
+
+.my-3 {
+  margin: 3rem 0;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.m-4 {
+  margin: 4rem;
+}
+
+.my-4 {
+  margin: 4rem 0;
+}
+
+.p-4 {
+  padding: 4rem;
+}
+
+.py-4 {
+  padding: 4rem 0;
+}
+
+.m-5 {
+  margin: 5rem;
+}
+
+.my-5 {
+  margin: 5rem 0;
+}
+
+.p-5 {
+  padding: 5rem;
+}
+
+.py-5 {
+  padding: 5rem 0;
+}/*# sourceMappingURL=style.css.map */
